@@ -13,6 +13,7 @@ class FrontendController extends Controller
     public function __construct() {
         $this->vedicAstroApi = new VedicAstroApi();
     }
+    
     public function index(){
         if(session()->has('get_kundli') && request('new') == 1){
             session()->forget('get_kundli');
